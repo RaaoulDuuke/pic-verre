@@ -1,0 +1,278 @@
+----------------------------
+;*******************************
+;* MODE DEBUGGAGE / DEBUG MODE *
+;*******************************
+;-------------------------------
+
+; ------francais------
+; ON: Permet d'afficher les champs qui seront envoyes a la plateforme.
+; OFF: Redirection automatique vers la page de paiement.
+
+
+debug = 0
+
+
+;------------------------------------------
+;******************************************
+;* ACCES A LA PLATEFORME / GATEWAY ACCESS *
+;******************************************
+;------------------------------------------
+
+;--------------
+; vads_site_id 
+;--------------
+
+; ------francais------
+; Identifiant Boutique à récupérer dans le Back office de la solution de paiement.
+
+
+vads_site_id = 57251463
+
+
+;------
+; keys
+;------
+
+; ------francais------
+; Certificat à récupérer dans le Back office de la solution de paiement. 
+; Attention ce certificat est différent en fonction de vads_ctx_mode, TEST ou PRODUCTION. 
+; Le certificat n'est pas envoyé à la plateforme de paiement mais intervient dans le calcul de la signature.
+
+
+TEST_key = 70uAGTAaN8Pg74UT
+PROD_key = 37Hvu0Yd90ZFZbSv
+
+
+;---------------
+; vads_ctx_mode 
+;---------------
+
+; ------francais------
+; Mode de fonctionnement. Valeur = TEST ou PRODUCTION
+
+
+vads_ctx_mode = PRODUCTION
+
+
+;--------------
+; vads_version 
+;--------------
+
+; ------francais------
+; Ce paramètre est obligatoire et doit être valorisé à V2.
+
+
+vads_version = V2
+
+
+;---------------
+; vads_language 
+;---------------
+
+; ------francais------
+; Langue dans laquelle s'affiche la page de paiement.
+; fr pour Français, en pour Anglais.
+
+
+vads_language = fr
+
+
+;-------------------------------------------------------
+;*******************************************************
+;* PARAMETRES DE LA TRANSACTION / TRANSACTION SETTINGS *
+;*******************************************************
+;-------------------------------------------------------
+
+
+;-----------
+; signature 
+;-----------
+
+; ------francais------
+; La signature est un paramètre obligatoire. Elle est calculée par la fonction Get_signature du fichier 
+; function.php inclu dans ce pack.
+
+
+;signature =
+
+
+;-----------------
+; vads_trans_date
+;-----------------
+
+; ------francais------
+; Ce champ est obligatoire, il correspond à la date de la transaction exprimée sous la forme AAAAMMJJHHMMSS 
+; sur le fuseau UTC=0. Cette valeur sera calculée par le fichier function.php.
+
+
+;vads_trans_date =
+
+
+;---------------
+; vads_trans_id -
+;--------------
+
+; ------francais------
+; Ce champ est obligatoire, il correspond à l'identifiant de la transaction. Cet identifiant doit être:
+; - unique sur une même journée.
+; - sa longueur est obligatoirement de 6 caractères.
+; - Sa valeur est doit être comprise entre 000000 et 899999.
+; DANS CET EXEMPLE LE CALCUL DE CE CHAMP EST FAIT PAR LE FICHIER "function.php" et s'appuie sur un compteur. 
+; VOUS POUVEZ CALCULER CE CHAMP A VOTRE CONVENANCE EN RESPECTANT LES REGLES DU CHAMP TRANS_ID.
+
+
+;vads_trans_id =
+
+
+;---------------
+; vads_currency 
+;---------------
+
+; ------francais------
+; Code devise. 978 pour EURO.
+
+
+vads_currency = 978
+
+
+;------------------
+; vads_page_action 
+;------------------
+
+; ------francais------
+; Ce paramètre est obligatoire et doit être valorisé à PAYMENT.
+
+
+vads_page_action = PAYMENT
+
+
+;------------------
+; vads_action_mode 
+;------------------
+
+; ------francais------
+; Ce paramètre est valorisé à INTERACTIVE si la saisie de carte est réalisée sur la plateforme de paiement. 
+
+
+vads_action_mode = INTERACTIVE
+
+
+;---------------------
+; vads_payment_config 
+;---------------------
+
+; ------francais------
+; Ce paramètre est valorisé à SINGLE pour un paiement simple.
+
+
+vads_payment_config = SINGLE
+
+
+;--------------------
+; vads_capture_delay 
+;--------------------
+
+; ------francais------
+; Ce Paramètre  facultatif indique le délai en nombre de jours avant remise en banque. Si ce 
+; paramètre n’est pas transmis, alors la valeur par défaut définie dans le back office marchand 
+; sera utilisée. Cette dernière est paramétrable dans l’outil de gestion de caisse  Systempay  par 
+; toutes les personnes dûment habilitées.
+
+
+;vads_capture_delay = 0
+
+
+;----------------------
+; vads_validation_mode 
+;----------------------
+
+; ------francais------
+; Paramètre  facultatif précisant le mode de validation de la transaction. 
+; 1: Validation manuelle par le commerçant
+; 0: Validation automatique par la plateforme
+; Si ce paramètre n’est pas transmis, alors la valeur par défaut définie 
+; dans le back-office marchand sera utilisée.
+
+
+;vads_validation_mode = 0
+
+;---------------------------------------------
+;*********************************************
+;* RETOUR A LA BOUTIQUE / RETURN TO THE SHOP *
+;*********************************************
+;---------------------------------------------
+
+;-----------------
+; vads_url_return 
+;-----------------
+
+; ------francais------
+; Url de retour à la boutique. Lorsque le client clique sur "retourner à la boutique"
+; cette url permet de faire un traitement affichage en indiquant l'état du paiement. 
+; Il est fortement conseillé de ne pas faire de traitement en base de données 
+; (mise à jour commande, enregistrement commande) suite à l'analyse du résultat du paiement.
+; C'est l'appel de l'url serveur qui doit vous permettre de mettre à jour la base de données.
+
+
+;vads_url_return = 
+
+
+;------------------
+; vads_return_mode 
+;------------------
+
+; ------francais------
+; Ce paramètre définit dans quel mode seront renvoyés les paramètres lors du retour à la boutique 
+; (3 valeurs possibles GET / POST / NONE). Si ce champ n'est pas posté alors la plateforme ne renvoie 
+; aucun paramètre lors du retour à la boutique par l'internaute.
+
+
+vads_return_mode = POST
+
+
+;-------------------------------
+; vads_redirect_success_timeout 
+;-------------------------------
+
+; ------francais------
+; Ce paramètre définit la durée avant un retour automatique à la boutique pour un paiement accepté 
+; (valeur exprimée en seconde).
+
+
+vads_redirect_success_timeout = 60
+
+
+;-------------------------------
+; vads_redirect_success_message 
+;-------------------------------
+
+; ------francais------
+; Ce paramètre définit un message sur la page de paiement avant le retour automatique à la boutique 
+; dans le cas d'un paiement accepté.
+
+
+vads_redirect_success_message = Redirection vers votre compte Pic-Verre
+
+
+;-----------------------------
+; vads_redirect_error_timeout 
+;-----------------------------
+
+; ------francais------
+; Ce paramètre définit la durée avant un retour automatique à la boutique pour un paiement échoué 
+; (valeur exprimée en seconde).
+
+
+vads_redirect_error_timeout = 1
+
+
+;-----------------------------
+; vads_redirect_error_message 
+;-----------------------------
+
+; ------francais------
+; Ce paramètre définit un message sur la page de paiement avant le retour automatique à la boutique 
+; dans le cas d'un paiement échoué.
+
+
+vads_redirect_error_message = Redirection vers la page abonnement
