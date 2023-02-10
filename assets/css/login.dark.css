@@ -1,0 +1,10 @@
+body{ background-color:#222;}
+form p{ color:#DDD;}
+form .list-group-item{ background-color:#008850;} 
+form .list-group-item .text-muted{ color:#FFF!important;}
+.form-control, .ui-widget.ui-widget-content{  border:2px solid #ffc107;}
+.btn{ color:#000;}
+#aboLink{ background-color:#008850;}
+#aboLink small a{ color:#ffc107;} 
+.bg-info{ background:black!important;}
+.modal-content{background:#008850;}

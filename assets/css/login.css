@@ -1,0 +1,90 @@
+html{ position:relative; min-height: 100%;}
+body { color:#FFF; padding-top:0;  font-size:.8rem; line-height: 1.2; background-color: #01bd70;  display: -ms-flexbox; display: flex;}
+
+.container { max-width: 45em; margin:50px 0;}
+
+/* GLOBAL */
+a {color:gold; font-weight:bold;}
+a:hover, a:focus, a:active{color:orange;}
+
+i{ color:gold;}
+
+p.lead{font-size:.9rem; font-weight:600;}
+h1{ font-size:1.9rem;}
+h2,.h2{ font-size:1.1rem;  }
+h1, h2,.h2{color:gold; text-transform:uppercase;font-weight:900;}
+
+/* HEADER */	
+.header { position: absolute; top: 0; left:0; right:0; height: 35px; line-height: 35px; background:rgba(0,0,0,.2); font-size:.8rem; }
+.header a{ color:#FFF;}
+
+/* FOOTER */	
+.footer { position: absolute; bottom: 0; left:0; right:0; height: 35px; line-height: 35px; background:rgba(0,0,0,.2); font-size:.8rem;color:rgba(255,255,255,.5); transition: all 0.4s ease 0s; }
+.footer a{ color:#FFF;}
+
+/* FORM */
+form p{ font-size:.85rem;}
+form a{ color:gold;}
+form a:hover, form a:focus, form a:active{color:orange;}
+
+.form-group{ margin-bottom:.5rem; }
+
+.form-control, .ui-widget.ui-widget-content{ font-weight:bold; box-shadow: 0 1px  3px 1px rgba(0, 0, 0, 0.5) inset; border:1px solid #01bd70;}
+input:focus, select:focus{ box-shadow: 0 0 5px #000; border-color: #FFF; }
+
+form .list-group{  border-radius:.25rem; font-size:.9rem;}
+form .list-group-item { background-color: #9dcbee; line-height:1.2;}
+form .list-group-item small{ font-size:.8rem; }
+form .list-group .badge{ font-size:90%; }
+
+
+.bg-info{ background:#2bc971!important;}
+
+/* BTN */
+.btn-secondary { color: #fff; font-weight:bold;border:none;background-color:gold;}
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus { background-color:orange;  }
+.btn-secondary i {color:#a97e00;}
+
+.badge-warning{background-color:gold;} 
+
+#aboLink{ background-color:#9fcced; border:none; }
+
+/* MODAL */
+.modal-content{background:#09a967; color:#FFF;  border-width:0;}
+.modal-content h2{ font-size:1.4em!important;} 
+.modal-content  p{font-size:1rem;}
+.modal-content section{ padding:1rem;}
+
+#contactModal .modal-content p{ font-size:.9em!important; color:#FFF;}
+#contactModal  button.close { position:absolute; top:10px; right:10px; z-index: 1000; text-shadow:none; font-size:2rem;}
+
+@media (max-width: 576px) { 
+	/*#logo{ width:60px;}*/
+
+}
+
+@media (min-width: 576px) { 
+	html,body { height: 100%;}
+	body {font-size:.9rem;  }
+	p.lead{font-size:1.2rem;}
+	#logo{ height:auto;}
+	
+}
+
+
+@media (min-width: 768px) {
+	html,body { height: 100%;box-shadow: inset 0 0 20rem rgba(0, 0, 0, .5);}
+	.container {  margin:0;}
+}
+
+
+@media (min-width: 992px) {
+	body {font-size:1.1rem;}
+	.container { max-width: 35em;}
+}
+
+@media (min-width: 1200px) {
+	
+}

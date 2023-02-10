@@ -1,0 +1,64 @@
+html,
+body { height: 100%;  background-color: #01bd70;}
+body { display:-ms-flexbox;  display:flex; color:#fff; box-shadow:inset 0 0 20rem rgba(0, 0, 0, .3);}
+
+a, a:focus, a:hover{ color:#fff;}
+
+.btn-primary { color:#fff; font-weight:700; border:none; background:#ffc107; text-shadow:0px -1px 0px rgba(0,0,0,.4); }
+.btn-primary:hover, .btn-primary:active { background: #ffa407;}
+.btn-primary:focus{ box-shadow:0 0 0 0.2rem rgba(255,255,255,.5);  background:#ffc107;}
+.btn-primary i {color:#a97e00; font-size:.9rem;font-weight:600;}
+
+h1 img { width:50%; }
+
+main { text-align:center; max-width:60rem;  padding:0 1.5rem!important;}
+main h2 { color:#ffc107; text-transform:uppercase; text-shadow:0px -1px 0px rgba(0,0,0,.4); font-weight:bolder; font-size:1.9rem; }
+main p { font-weight:500; font-size:1.3rem; color:#017646; }
+main p strong { color:#FFF; font-weight:800; text-shadow:0 .05rem .1rem rgba(0, 0, 0, .5); } 
+
+header { background:#9acaeb; }
+header p{text-shadow:0 .05rem .1rem rgba(0, 0, 0, .5);}
+header p, header button { font-size:.7rem!important; }
+header button{ margin-top:.5rem; padding: .25rem .75rem!important;}
+footer { color:rgba(255,255,255,.5); background:rgba(0,0,0,.2); font-size:.6rem; }
+
+.modal-content { background:#9acaeb;}
+.modal-header { background:url("https://assets.pic-verre.fr/img/logo-sm.png") no-repeat 10px 5px; padding-left:65px; }
+.modal h3{color:#ffc107; text-transform:uppercase; text-shadow:0px -1px 0px rgba(0,0,0,.4); font-weight:bolder; font-size: 2rem; line-height: .8; }
+.modal p { font-size:1rem;text-shadow:0 .05rem .1rem rgba(0, 0, 0, .5); }
+.close{ font-size:1.8rem;}
+
+.form-control { box-shadow: 0 1px  3px 1px rgba(0, 0, 0, 0.5) inset; border:1px solid rgba(0,0,0,.1); }
+
+
+@media (max-width: 375px) { 
+	main h2 { font-size:1.4rem; }
+	main p { font-size:1rem; }
+}
+
+@media (min-width: 576px) {
+	h1 img { width:65%;}
+	main h2 { font-size:2.5rem; }
+	main p { font-size:1.8rem;}
+	
+}
+
+@media (min-width: 768px) {
+	h1 img { width:50%; }
+	main { padding:0 4rem!important; }
+	main h2 { font-size:2.8rem; }
+	main p { font-size:2rem; }
+	header p{ font-size:1.3rem!important; }
+	header button { font-size:1.2rem!important; }
+	footer p { font-size:1rem; }
+}	
+
+@media (min-width: 992px) {
+	h1 img { width:100%; margin-bottom:0; }
+	main { text-align:left; padding:0!important; }
+	main h2 { font-size:1.8rem; }
+	main p { font-size:1.6rem; }
+	header p { font-size:1.2rem!important; }
+	header button{ margin-left:.5rem; margin-top:0; font-size:1.1rem!important;}
+	footer p { font-size:.9rem; }
+}

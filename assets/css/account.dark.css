@@ -1,0 +1,28 @@
+body{ background:#212529; color:#FFF;}
+.navbar{background-color:#007948!important; }
+/* SIDEBAR */
+.sidebar-nav li a:hover{background:#383838;}
+/* BUTTONS */
+.btn-primary{ color:#000!important;}
+.btn-primary i{ color:#FFF!important;} 
+.btn-secondary { background:#007948; }
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus { background: #02843a; }
+/* BACKGROUNDS */
+.bg-white, .bg-dark{ background-color:#000!important;}
+.bg-info{background-color:DodgerBlue !important;}
+.bg-secondary{ background-color:#007948!important; color:#FFF!important; }
+/* TITLES */
+h3, .h3{text-shadow:none;  }
+/* TABLES */
+.table{color: #FFF;  }
+.table-light { background:#383838;}
+.table-dark { background-color: #000;}
+/* MODAL */
+.modal-content { background: #212529;}
+.modal-content p{ color: #FFF;}
+/* MISC */
+.text-muted { color:rgba(255,255,255,.25)!important;}
+.form-control, .ui-widget.ui-widget-content{  border:2px solid gold;}
+.list-group-item-dark{background:#383838;}
+
+#pickInfos p, #pickInfos button{ color: #FFF;}
