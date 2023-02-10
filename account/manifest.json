@@ -1,0 +1,25 @@
+{
+  "short_name": "Pic'Verre",
+  "name": "Mon compte Pic'Verre",
+  "icons": [
+        {
+            "src": "https://mon-compte.pic-verre.fr/img/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://mon-compte.pic-verre.fr/img/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "https://mon-compte.pic-verre.fr/img/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+  "start_url": "https://mon-compte.pic-verre.fr/connexion.php",
+  "background_color": "#01bd70",
+  "display": "standalone",
+  "theme_color": "#01bd70"
+}
